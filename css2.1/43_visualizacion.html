@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Visualizacion (display | visibility)</title>
+  <style>
+  main{
+    margin: 20px auto;
+    width: 900px;
+  }
+  section{
+    border: 2px solid #999;
+    display: inline-block;
+    width: 440px;
+  }
+  div{
+    border: 1px solid #ccc;
+    display: inline-block;
+     height: 100px;
+     margin: 0px 0px 20px 30px;
+     width: 100px;
+  }
+.desaparecer{
+  display: none;
+}
+.ocultar{
+  visibility: hidden;
+}
+
+  </style>
+</head>
+<body>
+  <h1>Visualizacion(display | visibility)</h1>
+  <hr>
+<main>
+  <section>
+  <h4>Display: none;</h4>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div class="desaparecer">5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+  </section>
+  <section>
+  <h4>Visibility: hidden;</h4>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div class="ocultar">5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+  </section>
+</main>
+</body>
+</html>

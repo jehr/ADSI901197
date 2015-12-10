@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Sprites</title>
+ <style>
+ main {
+  border: 10px solid #0A3D5D;
+  height: 250px;
+  margin: 50px auto;
+  width: 450px;
+ }
+ h1 {
+  background-color: #0A3D5D;
+  color: #fff;
+  font: 2em Arial;
+  margin: 0px;
+  padding: 4px 0px;
+  text-align: center; 
+ }
+ section#sprite {
+  border: 1px solid #ddd;
+  background-image:  url(img/soldado.jpg);
+  height: 120px;
+  margin: 40px auto;
+  width: 120px;
+
+ }
+.sprite1 {background-position: 0px     0px;}
+.sprite2 {background-position: -120px  0px;}
+.sprite3 {background-position: -240px  0px;}
+
+.sprite4 {background-position: -0px 50px;}
+.sprite5 {background-position: 0px    -70px;}
+.sprite6 {background-position: -80px  -70px;}
+
+.sprite7 {background-position: -160px -70px;}
+.sprite8 {background-position: -240px -70px;}
+.sprite9  {background-position: 0px    -130px;}
+
+
+ </style>
+
+</head>
+<body>
+ <main>
+ <h1>Sprites</h1>
+ <section id="sprite" class="sprite4"></section>
+ </main>
+ <script>
+ var sprite= document.getElementById('sprite');
+ var num = 1;
+ //setInterval(function() {
+ 	if (num > 3) {
+ 		sprite.classList.remove('sprite4');
+ 		sprite.classList.add('sprite1');
+ 		num = 1;
+ 	} else {
+ 		sprite.classList.remove('sprite'+ num);
+ 		++num;
+ 		sprite.classList.add('sprite'+num);
+ 	}
+ },700);
+ </script>
+</body>
+</html>

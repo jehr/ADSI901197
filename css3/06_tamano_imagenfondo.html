@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tamaño de la imagen de fondo</title>
+	<style>
+	section{
+		border: 2px solid #666;
+		background: url(imgs/Gohan-kamehame.jpg) no-repeat center center;
+	}
+	.bg1{
+		background-size: 50%;
+		height: 200px;
+		width: 200px;
+	}
+	.bg2{
+		background-size: cover;
+		height: 900px;
+		width: 900px;
+	}
+	.bg3{
+		background-size: contain;
+		height: 400px;
+		width: 600px;
+	}
+	</style>
+</head>
+<body>
+	<h1>Tamaño de la imagen de fondo</h1>
+	<hr>
+	<h3>BACKGROUND-SIZE 50%;</h3>
+	<section class="bg1"></section>
+	<h3>BACKGROUND-SIZE COVER;</h3>
+	<section class="bg2"></section>
+	<h3>BACKGROUND-SIZE CONTAIN;</h3>
+	<section class="bg3"></section>
+</body>
+</html>

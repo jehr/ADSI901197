@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Media Queries</title>
+	<style>
+	body{
+		font: 16px Tahoma;
+	}
+	section.page{
+		border: 10px solid #3191F3;
+		padding: 20px;
+	}
+	section.page p{
+		text-align: justify;
+		line-height: 22px;
+	}
+
+	.res {display: none; }
+
+	@media (max-width: 1280px ){
+		section.page{
+			background-color: #8A1616;
+		}
+		.res{display: none; }
+		.res1280 {display: inline; }
+	}
+	@media (max-width: 1024px){
+		section.page{
+			background-color: #2A0C80;
+		}
+		.res {display: none; }
+		.res1024 {display: inline; }
+	}
+	@media (max-width: 800px){
+		section.page{
+			background-color: #09800C;
+		}
+		.res { display: none; }
+		.res800 { display: inline; }
+	}
+	@media (max-width: 600px){
+		section.page {background-color: #098365;}
+			.res {display: none; }
+			.res600 { display: inline;
+
+				}
+
+	}
+	</style>
+</head>
+<body>
+	<section class="page">
+		<h1>Media Queries | Resolucion Detectada
+			<span class="res res1280">1280px</span>
+			<span class="res res1024">1024px</span>
+			<span class="res res800">800px</span>
+			<span class="res res600">600px</span>
+		</h1>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum error totam vero ducimus earum optio, ratione fugit, velit consectetur est qui omnis quia, enim dolores doloribus ea! Quaerat doloremque laboriosam eum natus qui ipsum esse harum ipsa voluptatum? Magni quisquam optio dolore modi laborum possimus culpa maxime quis necessitatibus reiciendis illum sint quibusdam a, porro, odio voluptas debitis aspernatur, dicta. Totam eveniet quo ex excepturi, magnam odit tenetur placeat esse eum illum aperiam reiciendis quod, labore quibusdam consectetur, quisquam autem officiis. Similique ipsum commodi excepturi optio fugit quidem ex doloribus, quo voluptate quisquam aliquam cum! Totam tenetur, eveniet ipsa voluptas. Impedit repellendus, hic amet, ad rem rerum cupiditate harum possimus minus, praesentium nulla aut tempore sapiente recusandae cum. Voluptates ducimus, tenetur similique. Officia numquam minus recusandae assumenda dolore. Beatae, debitis officiis! Distinctio illum, fuga ea, delectus impedit cupiditate iste sunt voluptate voluptatibus soluta provident debitis alias totam. Omnis quasi soluta veniam asperiores eligendi nihil, distinctio, non, laboriosam corporis dolore atque totam unde incidunt itaque rem inventore temporibus animi, officiis saepe. Id vel sed tempore temporibus voluptates beatae minus error nemo molestias architecto, ut? Sed quisquam sequi tempora commodi velit quo nobis repellendus in eligendi delectus, est provident debitis, ea totam!
+		</p>
+	</section>
+</body>
+</html>

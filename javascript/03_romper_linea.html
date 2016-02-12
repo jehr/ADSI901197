@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Romper lineas de texto</title>
+</head>
+<body>
+	<h1>Romper lineas de texto</h1>
+	<hr>
+	<p id="parrafo"></p>
+
+	<script>
+	var parrafo1 = "JavaScript es un lenguaje de programación \
+	               orientado a la web, tambien es reconocido \
+	               como el lenguaje de programacion mas usado \
+	               en la actualidad.";
+
+	var parrafo2 = "JavaScript es un lenguaje de programación \n orientado a la web, tambien es reconocido \n como el lenguaje de programacion mas usado \n en la actualidad.";               
+	document.getElementById('parrafo').innerHTML = parrafo1;
+	alert(parrafo2);
+
+	</script>
+</body>
+</html>

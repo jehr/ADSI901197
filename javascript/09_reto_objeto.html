@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Reto Objeto</title>
+	<style>
+	body{
+		background-color: #9a1214;
+		font-size: 16px Tahoma;
+	}
+	section.contenedor {
+		border: 10px solid #6f0c0d;
+		background-color: #fff;
+		margin: 20px auto;
+		padding: 20px;
+		width: 1160px;
+	}
+	section.contenedor h1{
+		color: #9a1214;
+		text-align: center;
+	}
+	section.contenedor hr{
+		border-color: #9a1214;
+	}
+	nav.opciones{
+		margin: 20px auto;
+		width: 200px;
+	}
+	button{
+		border: none;
+		background-color: #9a1214;
+		color: #fff;
+		display: block;
+		padding: 10px;
+		margin-bottom: 1px;
+		width: 100%;
+		-webkit-transition: all 0.5s;
+	}
+	button:hover{
+		cursor: pointer;
+		-webkit-transform: scale(1.1);
+	}
+	img{
+		-webkit-transform: rotateY(180deg);
+		width: 250px;
+	}
+	</style>
+</head>
+<body>
+	<section class="contenedor">
+		<h1>Reto objetos</h1>
+	    <hr>
+	    <img id="vhcl" src="imgs/fiat.jpg">
+	    <br>
+	    <nav class="opciones">
+           <button id="btn-iniciar">Iniciar</button>
+	       <button id="btn-avanzar">Avanzar</button>
+	       <button id="btn-detener">Detener</button>
+	       <button id="btn-info">Mostar Datos</button>
+	    </nav>
+	</section>
+	
+
+	<script>
+	var vehiculo = {
+		marca:      "Fiat",
+		referencia: '500',
+		modelo:      2015,
+		color:      'Rojo',
+		cilindraje:  1400,
+
+		iniciar: function(){
+			alert("Iniciado...");
+
+		},
+		avanzar: function(){
+			alert("Avanzando...");
+
+		},
+		detener: function(){
+			alert("Detenido...");
+
+		},
+		info: function(){
+			alert( "Marca:         "+this.marca+ 
+				" \nReferencia:   "+this.referencia+
+				" \nModelo:       "+this.modelo+
+			    " \ncolor:        "+this.color+
+			    " \ncilindraje:    "+this.cilindraje );
+
+		}
+	};
+
+	var btnIniciar = document.getElementById('btn-iniciar');
+	var btnAvanzar = document.getElementById('btn-avanzar');
+	var btnDetener = document.getElementById('btn-detener');
+	var btnInfo = document.getElementById('btn-info');
+
+    btnIniciar.onclick = function() {
+		vehiculo.iniciar();
+	}
+
+	btnAvanzar.onclick = function() {
+		vehiculo.avanzar();
+	}
+
+	btnDetener.onclick = function() {
+		vehiculo.detener();
+	}
+
+	btnInfo.onclick = function() {
+		vehiculo.info();
+	}
+
+
+	</script>
+</body>
+</html>

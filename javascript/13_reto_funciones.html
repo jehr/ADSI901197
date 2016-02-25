@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		font: 14px Arial;
+	}
+	fieldset {
+		border: 4px solid #eee;
+		margin: 100px auto;
+		padding: 10px;
+		width: 200px;
+	}
+	input, output, button {
+		display: block;
+		padding: 10px;
+		width: 180px;
+	}
+	button { width: 204px; }
+	output {
+		color: #3186BC;
+		font-size: 20px;
+	}
+	</style>
+</head>
+<body>
+	<h1>Operaciones</h1>
+	<fieldset>
+		<legend><h2>Operaciones</h2></legend>
+		<input type="number" id="n1" placeholder="Número 1" >
+		<br>
+		<input type="number" id="n2" placeholder="Número 2" >
+		<br>
+		<select id="opc">
+			<option value="">Elige la operacion a realizar</option>
+			<option value="1" onclick="calcula ('+')">Suma</option>
+			<option value="2" onclick="calcula ('-')">Resta</option>
+			<option value="3" onclick="calcula ('*')">Multiplicacion</option>
+			<option value="4" onclick="calcula ('/')">Division</option>
+		</select>
+		<br>
+		<p>
+		<button onclick="calcular()">Calcular</button>
+		<br>
+		<output id="res"></output>
+	</fieldset>
+	<script>
+	 function Suma (n1, n2) {
+	 	return parseInt(n1)+parseInt(n2);
+	 }
+	 function Resta (n1, n2) {
+	 	return n1-n2;
+	 }
+	 function Multiplicacion (n1, n2) {
+	 	return n1*n2;
+	 }
+	 function Division (n1, n2) {
+	 	return n1/n2;
+	 }
+	function calcular() {
+		var n1 = document.getElementById('n1').value;
+		var n2 = document.getElementById('n2').value;
+		var opc = document.getElementById('opc').value;
+
+		if (opc == 1) { res.innerHTML = "La suma es: "+Suma(n1, n2); }
+		if (opc == 2) { res.innerHTML = "La resta es: "+Resta(n1, n2); }
+		if (opc == 3) { res.innerHTML = "La multiplicacion es: "+Multiplicacion(n1, n2); }
+		if (opc == 4) { res.innerHTML = "La division es: "+Division(n1, n2); }
+	}
+	</script>
+</body>
+</html>

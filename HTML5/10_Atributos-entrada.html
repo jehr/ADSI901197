@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Nuevos Atributos de Entrada (formulario) html5</title>
+</head>
+<body>
+	<h1>Nuevos Atributos de Entrada (formulario) html5</h1>
+	<hr>
+	<!-- ::::::::::::::::::::::::::: -->
+	<form action="">
+		<label for="">Autocompletar</label>
+		<input type="email" name="correo" id="correo" autocomplete="on">
+		<hr>
+		<!-- ::::::::::::::::::::::::: -->
+    <fieldset>
+    	<legend><h2>Required/Placeholder</h2></legend>
+    	<input type="text" name="nambre" placeholder="Ingrese su nombre" required>
+    </fieldset>
+        <!-- ::::::::::::::::::::::::: -->
+    <fieldset>
+	<legend><h2>Min/Max/Step/Autofocus</h2></legend>
+	<input type="number" name="edad" min="10" max="60" step="10" autofocus>
+    </fieldset>
+        <!-- ::::::::::::::::::::::::: -->
+    <fieldset>
+	<legend><h2>Multiple</h2></legend>
+	<label>Seleccione sus deportes mfavoritos</label>
+	<select multiple>
+		<option value="1">Futbol</option>
+		<option value="2">Baloncesto</option>
+		<option value="3">Ciclismo</option>
+		<option value="4">Tejo</option>
+		<!-- ::::::::::::::::::::::::: -->
+		<fieldset>
+			<legend><h2>FormMethod</h2></legend>
+			<input type="submit" value="Enviar por Post" formmethod="post" formencype="multipar/form-data">
+			<input type="submit" value="Enviar por Get" formmehod="get" formaction="enlace1.html">
+		</fieldset>
+	</form>
+</body>
+</html>

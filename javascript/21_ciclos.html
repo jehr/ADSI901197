@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ciclos</title>
+</head>
+<body>
+	<h1>ciclos</h1>
+	<hr>
+
+	<script>
+	var frutas = new Array('Manzana', 'Guayaba', 'Pera', 'Piña', 'Mango', 
+		                   'Banano', 'Mandarina','Fresa', 'Sandia', 'Papaya');
+	/*
+	//  Forma larga, no recomendada.
+
+	document.write("<li>"+frutas[0]+"</li>");
+	document.write("<li>"+frutas[1]+"</li>");
+	document.write("<li>"+frutas[2]+"</li>");
+	document.write("<li>"+frutas[3]+"</li>");
+	document.write("<li>"+frutas[4]+"</li>");
+	document.write("<li>"+frutas[5]+"</li>");
+	document.write("<li>"+frutas[6]+"</li>");
+	document.write("<li>"+frutas[7]+"</li>");
+	document.write("<li>"+frutas[8]+"</li>");
+	document.write("<li>"+frutas[9]+"</li>");
+	*/
+
+	for (var i = 0; i < frutas.length; i++ ) {
+		document.write("<li>"+frutas[i]+"</li>");
+	}
+	</script>
+</body>
+</html>

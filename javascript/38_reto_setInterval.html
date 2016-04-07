@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Count Down</title>
+	<style>
+	h1{
+		text-align: center;
+	}
+
+	h2{
+		font: 3em Tahoma;
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+	<h1>Reto set interval</h1>
+	<hr>
+	<h2 id="segundos"></h2>
+
+	<script>
+		var tiempo = parseInt(prompt(" Ingrese tiempo en segundos"));
+
+		var segundos = document.getElementById('segundos');
+		var cont = tiempo;
+
+		var seg = setInterval(function() {
+			segundos.innerHTML = cont+"<br>segundos";
+			cont--;
+			if(cont < 0) {
+				alert("La secuencia a terminado");
+				clearInterval(seg);
+			}
+		},1000)
+	</script>
+</body>
+</html>
+	

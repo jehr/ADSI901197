@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Metodos de Texto</title>
+</head>
+<body>
+	<h1>Metodos de Texto</h1>
+	<hr>
+	<ul id="salida"></ul>
+
+	<script>
+	   var salida = document.getElementById('salida');
+
+	   var cadena = 'Lorem Impus Dolor Sit Amet.';
+
+	   // Longitud de Caracteres 
+	   salida.innerHTML += '<li>Texto: '+cadena+'</li>';
+
+	    // Longitud de Caracteres 
+	   salida.innerHTML += '<li>Longitud: '+cadena.length+'</li>';
+
+	    // Cortar cadena
+	   salida.innerHTML += '<li>Cortar: '+cadena.substring(0, 12)+'</li>';
+
+	   // Reemplazar cadena
+	   salida.innerHTML += '<li>Reemplazar: '+cadena.replace('Ipsum','ADSI')+'</li>';
+
+	   // Minusculas
+	   salida.innerHTML += '<li>Minusculas: '+cadena.toLowerCase()+'</li>';
+
+	   // Mayusculas
+	   salida.innerHTML += '<li>Mayusculas: '+cadena.toUpperCase()+'</li>';
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ciclo (Break)</title>
+</head>
+<body>
+	<h1>Ciclo (Break)</h1>
+	<hr>
+	<ul id="list"></ul>
+
+	<script>
+	var list = document.getElementById('list');
+	var cnt = '';
+	for(var i = 0; i < 100; i++) {
+		if (i % 2 !=0 ) cnt += '<li>'+i+'</li>';
+		if (i == 20) continue;
+		if (i == 50) break;
+	}
+	list.innerHTML = cnt;
+	</script>
+</body>
+</html>

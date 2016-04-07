@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+	h1{
+		text-align: center;
+	}
+</style>
+	<meta charset="UTF-8">
+	<title>Ventanas Emergentes</title>
+</head>
+<body>
+	<title>Ventanas Emergentes</title>
+	<hr>
+
+	<script>
+		var  edad = prompt("Cuál es su edad ? ");
+
+		if(edad >= 18) {
+			if(confirm('¿ Esta usted seguro ? ')) {
+				alert("¿Usted debera ir a la Guerra...");
+			}
+		}	else{
+			if(confirm('¿ Esta seguro ?')){
+				alert('Tenga un buen día...');
+			}
+		}	
+	</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Selectores jQuery </title>
+	<style>
+	table.table{
+		border: 2px solid #18AD14;
+		border-collapse: collapse;
+		color: #026F19;
+		font: 14px Tahoma;
+		margin: 20px auto;
+		width: 80%;
+	}
+	table.table td{
+		border: 2px solid #18AD14;
+		padding: 20px;
+	}
+	button{
+		border: none;
+		border-radius: 40px;
+		background-color: #258C25;
+		color: #fff;
+		font-size: 14px;
+		padding: 10px 40px;
+		cursor: pointer;
+	}
+	</style>
+</head>
+<body>
+	
+	<table class="table">
+	<tr>
+			<td>Nombre</td>
+			<td>Ciudad</td>
+			<td>Dirreción</td>
+			<td>Telefono</td>
+		</tr>
+		<tr>
+			<td>Jeremias</td>
+			<td>Sringfield</td>
+			<td>Calle 12</td>
+			<td>8 83 9898</td>
+		</tr>
+		<tr>
+			<td>Homero</td>
+			<td>Simpson</td>
+			<td>Calle siempre viva</td>
+			<td>8 82 8787</td>
+		</tr>
+		<tr>
+			<td>Marge</td>
+			<td>Simpson</td>
+			<td>Calle siempre viva</td>
+			<td>8 83 8787</td>
+		</tr>
+		<tr>
+			<td>Nelson </td>
+			<td>Muntz</td>
+			<td>Carrera 22-24</td>
+			<td>8 86 8787</td>
+		</tr>
+		<tr>
+			<td>Lisa </td>
+			<td>Simpson</td>
+			<td>Calle 00</td>
+			<td>8 80 8080</td>
+		</tr>
+
+		<tr>
+			<td colspan="4">
+				<button id="btFirst"> Eliminar Primero </button>
+				<button id="btLast"> Eliminar   Último </button>
+			</td>
+		</tr>
+	</table>
+
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('tr:even').css('background-color','#dff5d3');
+
+			$('#btFirst').click(function(event) {
+				if($('tr').length > 1) {
+					$ft = $('.table tr:first');
+					$ft.css('background-color','#fea8b1');
+					$ft.css('color','#fea8b1');
+
+					setTimeout(function(){
+						$ft.remove();
+					},100);
+
+					('tr:even').css('background-color','#dff5d3');
+					('tr:odd').css('background-color','#fff');
+				}
+			});
+
+		$('#btLast').click(function(event) {
+				if($('tr').length > 1) {
+					$lt = $('.table tr:last').prev();
+					$lt.css('background-color','#fea8b1');
+					$lt.css('color','#fea8b1');
+
+					setTimeout(function(){
+						$lt.remove();
+					},1000);
+
+					('tr:even').css('background-color','#dff5d3');
+					('tr:odd').css('background-color','#fff');
+				}
+			});
+
+		});
+	</script>
+</body>
+</html>

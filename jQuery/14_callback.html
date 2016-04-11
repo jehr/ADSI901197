@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Callback</title>
+	<style>
+	h1{
+		text-align: center;
+	}
+	</style>
+</head>
+<body>
+	<h1>Callback</h1>
+	<hr>
+	<article>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque accusantium, vero numquam commodi quis qui enim suscipit ad autem, veniam quos fugiat delectus. Sunt eum quas nihil dolores, consequatur ullam.
+		</p>
+	</article>
+
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script>
+	    $(document).ready(function() {
+	    	$('body').fadeOut(2000, function() {
+	    		alert('El contenido de la pagina ha terminado.');
+
+	    		if(confirm('Quiere ver el contenido de la pagina de nuevo ?')) {
+	    		$(this).slideDown(2500, function() {
+	    			alert('El contenido de la pagina ha regresado...');
+	    		});
+	    		}
+	    	});
+	    });
+	</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Manipulacion jQuery</title>
+	<style>
+	ul{
+		border: 2px dotted #851B1B;
+		padding: 10px;
+	}
+	</style>
+</head>
+<body>
+	<h1>Manipulacion del DOM (append/prepend/before/remove/empty) jQuery</h1>
+	<hr>
+	    <button id="btnPrepend"> Adicionar Hijo Inicio    </button>
+	    <button id="btnAppend">  Adicionar Hijo Final     </button>
+	    <button id="btnBefore">  Adicionar Hermano Inicio </button>
+	    <button id="btnAfter">   Adicionar Hermano Final  </button>
+	    <button id="btnRemove">  Remover Elementos        </button>
+	    <button id="btnEmpty">   Vaciar Contenido         </button>
+	<hr>
+	<ul class="colores">
+		<li>Rojo</li>
+		<li>Verde</li>
+		<li>Azul</li>
+	</ul>
+
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script>
+	      $(document).ready(function() {
+	      	//-----------------
+	      	$('#btnPrepend').click(function(event) {
+	      		$('.colores').prepend('<li> Amarillo </li>')
+	      	});
+	      	//-----------------
+	      	$('#btnAppend').click(function(event) {
+	      		$('.colores').append('<li>Naranja </li>')
+	      	});
+	      	//-----------------
+	      	$('#btnBefore').click(function(event) {
+	      		$('.colores').before('<ul><li> Blanco </li><li> Negro </li></ul>')
+	      	});
+	      	//-----------------
+	      	$('#btnAfter').click(function(event) {
+	      		$('.colores').after('<ul><li> Negro </li><li> Negro </li></ul>')
+	      	});
+	      	//-----------------
+	      	$('#btnRemove').click(function(event) {
+	      		$('ul').remove();
+	      	});
+	      	//-----------------
+	      	$('#btnEmpty').click(function(event) {
+	      		$('ul').empty();
+	      	});
+	      });
+	</script>
+</body>
+</html>

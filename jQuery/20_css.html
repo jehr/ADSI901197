@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Manipulacion CSS</title>
+	<style>
+	body{
+		background-color: #828112;
+		color: #fff;
+		font-family: sans-serif;
+	}
+	h1{
+		text-align: center;
+	}
+	section#slider {
+		background-color: #616009;
+		-webkit-box-shadow: 2px 2px 10px #000;
+		width: 600px;
+		margin: 40px auto;
+		height: 400px;
+		position: relative;
+	}
+	div.slides {
+		overflow: hidden; 
+		height: 100%;
+	}
+	figure {
+		height: 100%;
+		margin: 0px;
+		position: relative;
+		width: 100%;
+		z-index: 1;
+	}
+	figure.slide01 {
+		background: #616009 url(imgs/slide01.jpg) no-repeat center center;
+	}
+	figure.slide02 {
+		background: #616009 url(imgs/slide02.jpg) no-repeat center center;
+	}
+	figure.slide03 {
+		background: #616009 url(imgs/slide03.jpg) no-repeat center center;
+	}
+	figure figcaption {
+		background-color: rgba(97,96, 9, 0.7);
+		height: 100px;
+		padding: 20px;
+		position: absolute;
+		bottom: -140px; left: 0px;
+		width: 560px;
+		-webkit-transition: all 0.5s ease-in;
+	}
+	figure:hover figcaption {
+		bottom: 0px
+	}
+	figure figcaption h4 {
+		color: #fff;
+		word-spacing: 8px;
+		letter-spacing: 2px;
+		font-size: 2em;
+		margin: 0px;
+	}
+	figure figcaption p {
+		color: #C7C92E;
+		letter-spacing: 1px
+	}
+	
+    div.controls{
+      position: absolute;
+      top: 150px; left: -60px;
+      width: 760px;
+      z-index: 0;
+    }
+    div.controls button{
+      border: none;
+      background-color: rgba(60, 8, 108, 0.0);
+      color: #fff;
+      padding: 15px;
+      font-size: 4em;
+    }
+    div.controls button:hover{
+      background-color: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+    }
+    div.controls button#btnNext{
+       margin-left: 615px;
+    }
+    http://figure.active {
+    -webkit-animation: 0.5s animFigure ease-in-out 1;
+    }
+    @-webkit-keyframes animFigure{
+      0% { opacity: 0;
+    -webkit-transform: scale(10) rotate(90deg);}
+    100% { opacity: 1;
+    -webkit-transform: scale(1) rotate(0deg);}
+	</style>
+</head>
+<body>
+	<h1>Manipulacion CSS</h1>
+	<section id="slider">
+	  <div class="slides">
+			<!-- ---------- -->
+		<figure class="slide01">
+			<figcaption>
+				<h4>Evolucion Goku</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			</figcaption>
+		</figure>
+		<!-- ---------- -->
+		<figure class="slide02">
+			<figcaption>
+				<h4>Goku Sayayin</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			</figcaption>
+		</figure>
+		<!-- ---------- -->
+		<figure class="slide03">
+			<figcaption>
+				<h4>Goku y Freezer</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+			</figcaption>
+		</figure>
+		<!-- ---------- -->
+	  </div>
+	  <div class="controls">
+	  	<button id="btnPrev"> &lsaquo;  </button>
+	    <button id="btnNext"> &rsaquo;  </button>
+	  </div>		
+	</section>
+	<script src="js/jquery-1.12.3.min.js"></script>
+<script>
+$(document).ready(function() {
+$active = $('figure').first();
+$('figure').hide();
+$active.show().addClass('active');
+autoSlides();
+});
+$('#btnNext').click(function(event) {
+clearInterval($si);
+$active = $active.next();
+if ($('figure:last').hasClass('active')) {
+$active = $('figure').first();
+
+}
+$('figure').hide().removeClass('active');
+$active.show().addClass('active');
+autoSlides();
+}); 
+$('#btnPrev').click(function(event) {
+clearInterval($si);
+$active = $active.prev();
+if ($('figure:first').hasClass('active')) {
+$active = $('figure').last();
+
+}
+$('figure').hide().removeClass('active');
+$active.show().addClass('active');
+autoSlides();
+});
+function autoSlides(){
+$si = setInterval(function(){
+$active = $active.next();
+if ($('figure:last').hasClass('active')) {
+$active = $('figure').first();
+
+}
+$('figure').hide().removeClass('active');
+$active.show().addClass('active');
+},3000); 
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+{
+	"ciudad1": {
+		"nombre": "Manizales"
+	},
+	"ciudad2": {
+		"nombre": "Pereira"
+	},
+	"ciudad2": {
+		"nombre": "Armenia"
+	},
+	"ciudad3": {
+		"nombre": "Bogotá DC"
+	},
+	"ciudad4": {
+		"nombre": "Medellin"
+	},
+	"ciudad5": {
+		"nombre": "Cali"
+	},
+	"ciudad6": {
+		"nombre": "Barranquilla"
+	},
+	"ciudad7": {
+		"nombre": "Cartagena"
+	},
+	"ciudad8": {
+		"nombre": "Bucaramanga"
+	}
+}

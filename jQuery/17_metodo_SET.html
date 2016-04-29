@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Metodos SETAsignar</title>
+</head>
+<body>
+	<h1>Metodos SETAsignar</h1>
+	<hr>
+	<article>
+		<p>
+			<input type="text" id="nombre" placeholder="Ingrse Nombre">
+		</p>
+		<h1 id="titulo">Bienvenido</h1>
+		<p id="texto">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum tempora molestias est ab quae accusamus rem quas repellendus odit quis in esse, labore aperiam quibusdam eum expedita modi sed ea.
+		</p>
+		<p>
+			<a href="htttp://www.google.com">Buscar Información</a>
+		</p>
+	</article>
+	<button id="btnGet"> Asignar Texto </button>
+	<button id="btnHtml"> Asignar Html </button>
+	<button id="btnValue"> Asignar Valor </button>
+	<button id="btnAttr"> Asignar Atributo (href) </button>
+
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script>
+	      $(document).ready(function() {
+	      	//--------------------------------
+	      	$('input').keyup(function(event) {
+	      		$('h1#titulo').text('Bienvenido '+$(this).val());//SET //SETAsignar
+	      	});
+	      	//---------------- text()
+	      	$('#btnGet').click(function(event) {
+	      		alert($('#texto').text());
+	      	});
+	      	//---------------- html()
+	      	$('#btnHtml').click(function(event) {
+	      		alert($('article').html());
+	      	});
+	      	//---------------- val()
+	      	$('#btnValue').click(function(event) {
+	      		alert($('input').val());
+	      	});
+	      	//---------------- attr()
+	      	$('#btnAttr').click(function(event) {
+	      		alert($('a').attr('href'));
+	      	});
+
+	      });
+	      
+	</script>
+</body>
+</html>

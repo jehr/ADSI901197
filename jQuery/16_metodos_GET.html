@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Metodos GET</title>
+</head>
+<body>
+	<h1>Metodos GET</h1>
+	<hr>
+	<article>
+		<p>
+			<input type="text" id="nombre" placeholder="Ingrse Nombre">
+		</p>
+		<h1 id="titulo">Bienvenido</h1>
+		<p id="texto">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum tempora molestias est ab quae accusamus rem quas repellendus odit quis in esse, labore aperiam quibusdam eum expedita modi sed ea.
+		</p>
+		<p>
+			<a href="https://google.com/">Buscar Información</a>
+		</p>
+	</article>
+	<button id="btnGet"> Obtener Texto </button>
+	<button id="btnHtml"> Obtener Html </button>
+	<button id="btnValue"> Obtener Valor </button>
+	<button id="btnAttr"> Obtener Atributo (href) </button>
+
+	<script src="js/jquery-1.12.3.min.js"></script>
+	<script>
+	      $(document).ready(function() {
+	      	//--------------------------------
+	      	$('input').keyup(function(event) {
+	      		$('h1#titulo').text('Bienvenido '+$(this).val());//SET //GET
+	      	});
+	      	//---------------- text()
+	      	$('#btnGet').click(function(event) {
+	      		($('#texto').text('Hoy es miercoles'));
+	      	});
+	      	//---------------- html()
+	      	$('#btnHtml').click(function(event) {
+	      		($('article').html('<ul><li>Rojo</li> <li>Azul</li> <li>Negro</li> </ul>'));
+	      	});
+	      	//---------------- val()
+	      	$('#btnValue').click(function(event) {
+	      		($('input').val('ADSI'));
+	      	});
+	      	//---------------- attr()
+	      	$('#btnAttr').click(function(event) {
+	      		($('a').attr('href','https://twitter.com/?lang=es'));
+	      	});
+
+	      });
+	      
+	</script>
+</body>
+</html>

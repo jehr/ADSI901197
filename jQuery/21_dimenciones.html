@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dimensiones</title>
+	<style>
+	   div {
+         width: 400px;
+         height: 200px;
+         padding-left:  20px;
+         padding-right: 20px;
+         border: 4px solid #841717;
+         margin: 50px auto;
+         text-align: center;
+           }
+         
+	</style>
+</head>
+<body>
+	<h1>Dimenciones</h1>
+	<hr>
+
+	<div id="dimen">
+		<h3>Dimenciones</h3>
+	</div>
+	<p></p>
+	<button id="Btn1">Calcular Dimensiones </button>
+	<button id="Btn2">Calcular dimensiones con Relleno</button>
+	<button id="Btn3">Calcular dimensiones con Relleno y Borde</button>
+
+
+     <script src="js/jquery-1.12.3.min.js"></script>
+     <script>
+        $('#Btn1').click(function() {
+        	$ancho = $('div').width();
+        	$alto = $('div').height();
+        	$('#dimen h3').text('El ancho de la caja es:  ' + $ancho+ "  El alto de la caja es : "+$alto);
+        });
+        //--------------
+         $('#Btn2').click(function() {
+        	$ancho = $('div').innerWidth();
+        	$alto = $('div').innerHeight();
+        	$('#dimen h3').text('El ancho de la caja junto el relleno es: ' + $ancho+ " El alto de la caja es : "+$alto);
+        });
+         //--------------
+         $('#Btn3').click(function() {
+        	$ancho = $('div').outerWidth();
+        	$alto = $('div').outerHeight();
+        	$('#dimen h3').text('El ancho de la caja con el borde y relleno es: ' + $ancho+ " El alto de la caja es : "+$alto);
+        });
+     </script>
+	
+</body>
+</html>

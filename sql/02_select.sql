@@ -47,3 +47,82 @@ SELECT * FROM clientes WHERE documento NOT BETWEEN 30330565 AND 30330765;
 
 SELECT nombres AS n FROM clientes;
 
+#Alias
+SELECT c.*, cr.fecha, cr.total
+FROM clientes AS c, compras AS cr
+WHERE cr.cliente_id = c.documento;
+
+SELECT c.*, cr.*
+FROM clientes AS c, compras AS cr
+WHERE cr.cliente_id = c.documento;
+
+
+SELECT c.documento, c.nombres, cr.fecha, cr.total
+AS totalcompra, d.articulo, d.cantidad, d.precio
+AS totalarticulo
+FROM clientes AS c, compras AS cr, detalles AS d
+WHERE cr.cliente_id = c.documento AND d.compra_id = cr.id;
+
+
+SELECT c.documento, c.nombres, cr.fecha, cr.total
+AS totalcompra, d.articulo, d.cantidad, d.precio
+AS totalarticulo
+FROM clientes AS c, compras AS cr, detalles AS d
+WHERE cr.cliente_id = c.documento AND d.compra_id = cr.id
+ORDER BY d.precio ASC;
+
+
+#JOIN
+#INNERJOIN
+SELECT clientes.documento, clientes.nombres,
+compras.fecha, compras.total,
+detalles.articulo, detalles.cantidad, detalles.precio
+FROM clientes
+INNER JOIN compras 
+ON compras.cliente_id = clientes.documento
+INNER JOIN detalles
+ON detalles.compra_id = compras.id;
+
+
+#LEFTJOIN
+SELECT clientes.documento, clientes.nombres,
+compras.fecha, compras.total,
+detalles.articulo, detalles.cantidad, detalles.precio
+FROM clientes
+LEFT JOIN compras 
+ON compras.cliente_id = clientes.documento
+LEFT JOIN detalles
+ON detalles.compra_id = compras.id;
+
+
+#RIGHTJOIN
+SELECT clientes.documento, clientes.nombres,
+compras.fecha, compras.total,
+detalles.articulo, detalles.cantidad, detalles.precio
+FROM clientes
+RIGHT JOIN compras 
+ON compras.cliente_id = clientes.documento
+RIGHT JOIN detalles
+ON detalles.compra_id = compras.id;
+
+
+#FULLJOIN
+SELECT clientes.documento, clientes.nombres,
+compras.fecha, compras.total,
+detalles.articulo, detalles.cantidad, detalles.precio
+FROM clientes
+FULL JOIN compras 
+ON compras.cliente_id = clientes.documento
+FULL JOIN detalles
+ON detalles.compra_id = compras.id;
+
+#UNION
+SELECT documento AS documento_precio, nombres AS nombres_articulos FROM clientes
+UNION
+SELECT precio, articulo FROM detalles;
+
+SELECT * FROM clientes UNION ALL SELECT * FROM detalles;
+
+#Backup 
+INSERT INTO nuevos_clientes SELECT * FROM clientes;
+INSERT INTO nadsi901197.nuevos_clientes SELECT * FROM adsi901197.clientes;

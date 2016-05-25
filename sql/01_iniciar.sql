@@ -11,6 +11,8 @@ create database adsi901197;
 
 #Seleccionar Base de Datos
 use adsi901197;
+# Conectar base de datos
+connect adsi901197;
 
 # Mostrar Todas las Tablas Bases de Datos
 show tables;
@@ -24,6 +26,28 @@ create table clientes (
        direccion varchar(32),
        primary key(documento)
        );
+
+create table compras (
+       id int auto_increment,
+       fecha date,
+       cliente_id bigint,
+       total int,
+       primary key(id),
+       foreign key(cliente_id)
+       references clientes(documento));
+
+
+create table detalles (
+       id int auto_increment,
+       articulo varchar(32),
+       cantidad int(2),
+       precio float,
+       compra_id int,
+       primary key(id),
+       foreign key(compra_id)
+       references compras(id));
+       
+
 # Mostrar la estructura de la Tabla
 describe clientes;
 

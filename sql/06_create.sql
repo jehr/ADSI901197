@@ -24,3 +24,12 @@ CREATE TABLE materias (
  nombre varchar(32) NOT NULL,
  PRIMARY KEY(idm)
 );
+
+#Cambiar de NOT NULL a NULL
+ALTER TABLE usuarios CHANGE fnacimiento fnacimiento DATE NULL;
+
+#aGREGAR UNA COLUMNA A UNA TABLA
+ALTER TABLE notas ADD COLUMN mid int NOT NULL AFTER uid;
+
+#Agregar una llave foreana 
+ALTER TABLE notas ADD FOREIGN KEY (mid) REFERENCES materias(idm); AUBG
